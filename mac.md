@@ -40,3 +40,8 @@ ssh-keygen -t rsa -C "your_email@youremail.com"
 
   nvm install stable
   [使用nvm管理node](http://www.cnblogs.com/kaiye/p/4937191.html)
+## shadowsocks
+ve launchd start shadowsocks-libev now and restart at login:
+  brew services start shadowsocks-libev
+Or, if you don't want/need a background service you can just run:
+  /usr/local/opt/shadowsocks-libev/bin/ss-local -c /usr/local/etc/shadowsocks-libev.json
