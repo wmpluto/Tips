@@ -23,25 +23,32 @@
 
 ## vim
   1st install vundle
+
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
   Launch vim and run :PluginInstall
 
 ## git
   git config --global user.email "you@example.com"
+
   git config --global user.name "Your Name"
 
-  create ssh key
-ssh-keygen -t rsa -C "your_email@youremail.com"
+  create ssh key ssh-keygen -t rsa -C "your_email@youremail.com"
 
 ## node
   nvm node
+
   https://github.com/creationix/nvm
+
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 
   nvm install stable
+
   [使用nvm管理node](http://www.cnblogs.com/kaiye/p/4937191.html)
+
 ## shadowsocks
-ve launchd start shadowsocks-libev now and restart at login:
+  brew install shadowsocks-libev
+
+  config location /usr/local/etc/shadowsocks-libev.json
+  
   brew services start shadowsocks-libev
-Or, if you don't want/need a background service you can just run:
-  /usr/local/opt/shadowsocks-libev/bin/ss-local -c /usr/local/etc/shadowsocks-libev.json
