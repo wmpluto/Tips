@@ -5,6 +5,17 @@
 + cd -
 切换到上一工作路径
 
++ echo 'reading from stdin' | vi -
+vi/vim 从stdin读数据并编辑
+
++ kill `ps -ef | grep php-cgi | grep -v grep | awk '{print $2}'`
+kill php-cgi进程
+
+这里需要注意的是有很多命令的参数是不能从管道获取的，比如ssh的密码什么的，还有最简单的ls也不行，vim这种需要加个 - 才可以（echo "text from pipe" | vim -）。管道和stdin还是有区别的。
+
+一般脚本用kill都把pid放在变量里然后直接 kill $PID
+
+
 
 
 
